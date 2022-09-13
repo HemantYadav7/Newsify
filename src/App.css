@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255, 255, 255, 0.803);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbarContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: rgba(19, 6, 6, 0.739);
+  padding: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.heading {
+  /* margin: 0.4rem; */
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+.navbarContainer li {
+  color: rgb(188, 166, 166);
+}
+
+.btnlist {
+  display: flex;
+  margin-left: 0.5rem;
+}
+.btnlist li {
+  list-style: none;
+  margin: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.cardContainer {
+  width: 22rem;
+  height: auto;
+  /* border: 1px solid darkgrey; */
+  box-shadow: 0px 0px 9px 2px darkgray;
+  margin: 1rem;
+  background-color: white;
+}
+.cardImg {
+  width: 100%;
+  height: 14rem;
+}
+
+.cardInfo {
+  padding: 10px;
+}
+
+.cardInfo h3 {
+  text-align: center;
+  margin: 5px;
+}
+
+.newsCardContainer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.readmorebtn {
+  display: block;
+  margin-left: 75%;
+  background-color: white;
+
+  border: 0;
+  transition: all 0.3s ease-in-out;
+  margin-top: 18px;
+}
+.readmorebtn:hover {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.readmorebtn-con {
+  height: 1.5rem;
+}
+.readmorebtn a {
+  text-decoration: none;
+}
+
+.nextPrevtbns {
+  margin: 2rem 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: rgb(46, 97, 227);
+  font-weight: bold;
+  border-radius: 0.2rem;
   color: white;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading h1 {
+  display: block;
+  text-align: center;
 }
