@@ -352,8 +352,7 @@ export default class News extends Component {
     };
   }
   async componentDidMount() {
-    const url =
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21&page=1";
+    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21`;
     {
       this.setState({
         loading: true,
@@ -370,7 +369,9 @@ export default class News extends Component {
 
   render() {
     const nextPage = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21&page=${
+      const url = `https://newsapi.org/v2/top-headlines?country=in&category=${
+        this.props.category
+      }&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21&page=${
         this.state.page + 1
       }`;
       {
@@ -388,7 +389,9 @@ export default class News extends Component {
       });
     };
     const prevPage = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21&page=${
+      const url = `https://newsapi.org/v2/top-headlines?country=in&category=${
+        this.props.category
+      }&apiKey=30f6eead50a348d7a6b4e342a80867fe&pageSize=21&page=${
         this.state.page - 1
       }`;
       {
@@ -407,7 +410,7 @@ export default class News extends Component {
     };
     return (
       <>
-        <h1 style={{ margin: "2% 10%" }}>Newsify - Top Headlines</h1>
+        <h1 style={{ margin: "2% 10%" }}>Newsify - {this.props.newsTitle}</h1>
         {this.state.loading && <Loading />}
         <div className="newsCardContainer">
           {!this.state.loading &&
@@ -432,7 +435,7 @@ export default class News extends Component {
             &laquo; Prev
           </button>
           <button
-            disabled={this.state.page >= 2}
+            disabled={this.state.page >= 4}
             onClick={nextPage}
             className="prevBtn btn"
           >

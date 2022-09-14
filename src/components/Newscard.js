@@ -18,7 +18,7 @@ export default class Newscard extends Component {
           <p className="card description">{descrption}</p>
           <div className="readmorebtn-con">
             <button className="readmorebtn">
-              <a href={url} target="_blank">
+              <a href={url} rel="noreferrer" target="_blank">
                 read more..
               </a>
             </button>

@@ -32,6 +32,14 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
 }
+.btnlist li a {
+  text-decoration: none;
+  color: rgb(188, 166, 166);
+  transition: all 0.2s ease-in-out;
+}
+.btnlist li :hover {
+  color: white;
+}
 .cardContainer {
   width: 22rem;
   height: auto;
