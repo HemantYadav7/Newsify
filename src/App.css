@@ -12,7 +12,11 @@ body {
   background-color: rgba(19, 6, 6, 0.739);
   padding: 0.5rem 2rem;
   margin-bottom: 2rem;
+  width: 100%;
+  height: 3.5rem;
+  overflow: hidden;
 }
+
 .heading {
   /* margin: 0.4rem; */
   font-size: 2rem;
@@ -20,6 +24,15 @@ body {
 }
 .navbarContainer li {
   color: rgb(188, 166, 166);
+}
+.navbarContainer ul {
+  margin-left: 4rem;
+}
+.hideBtn {
+  display: none;
+}
+.showNav {
+  height: 20.5rem;
 }
 
 .btnlist {
@@ -42,8 +55,8 @@ body {
 }
 .cardContainer {
   width: 22rem;
-  height: auto;
-  /* border: 1px solid darkgrey; */
+  height: fit-content;
+
   box-shadow: 0px 0px 9px 2px darkgray;
   margin: 1rem;
   background-color: white;
@@ -106,4 +119,50 @@ body {
 .loading h1 {
   display: block;
   text-align: center;
+}
+.publishedDate {
+  font-size: 13px;
+  color: grey;
+  margin: 10px;
+  margin-top: 15px;
+}
+.showList {
+  border: 0;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 0.3rem;
+}
+.showList:hover {
+  color: yellowgreen;
+}
+
+@media (max-width: 1001px) {
+  .navbarContainer li {
+    font-size: 17px;
+  }
+  .navbarContainer ul {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .navbarContainer {
+    flex-direction: column;
+  }
+  .headingBTN {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .navbarContainer li {
+    margin: 0.5rem 1rem;
+  }
+  .hideBtn {
+    display: inline-block;
+  }
+  .heading {
+    display: block;
+  }
+  .btnlist {
+    flex-direction: column;
+  }
 }

@@ -6,6 +6,7 @@ import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default class App extends Component {
+  apiKey = "30f6eead50a348d7a6b4e342a80867fe";
   render() {
     return (
       <div>
@@ -17,6 +18,7 @@ export default class App extends Component {
               path="/"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"general"}
                   newsTitle="Top Headlines"
                   category="general"
@@ -28,6 +30,7 @@ export default class App extends Component {
               path="/business"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"business"}
                   newsTitle="Business News"
                   category="business"
@@ -39,6 +42,7 @@ export default class App extends Component {
               path="/entertainment"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"entertainment"}
                   newsTitle="Entertainment News"
                   category="entertainment"
@@ -50,6 +54,7 @@ export default class App extends Component {
               path="/health"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"health"}
                   newsTitle="Health News"
                   category="health"
@@ -61,6 +66,7 @@ export default class App extends Component {
               path="/science"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"science"}
                   newsTitle="Science News"
                   category="science"
@@ -72,6 +78,7 @@ export default class App extends Component {
               path="/sports"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"sports"}
                   newsTitle="Sports News"
                   category="sports"
@@ -83,6 +90,7 @@ export default class App extends Component {
               path="/technology"
               element={
                 <News
+                  apiKey={this.apiKey}
                   key={"technology"}
                   newsTitle="Technology News"
                   category="technology"

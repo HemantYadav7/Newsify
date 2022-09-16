@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Newscard extends Component {
   render() {
-    const { title, descrption, imgUrl, url } = this.props;
+    const { title, descrption, imgUrl, url, date, author } = this.props;
     return (
       <div className="cardContainer">
         <img
@@ -12,6 +12,7 @@ export default class Newscard extends Component {
               ? imgUrl
               : "https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?cs=srgb&dl=pexels-brotin-biswas-518543.jpg&fm=jpg"
           }
+          alt="newsimg"
         />
         <div className="cardInfo">
           <h3 className="cardHeading">{title}</h3>
@@ -21,8 +22,12 @@ export default class Newscard extends Component {
               <a href={url} rel="noreferrer" target="_blank">
                 read more..
               </a>
+              <br />
             </button>
           </div>
+          <p className="publishedDate">
+            By {author ? author : "unknown"} on {new Date(date).toGMTString()}
+          </p>
         </div>
       </div>
     );
