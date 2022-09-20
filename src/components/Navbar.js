@@ -15,37 +15,39 @@ export default class Navbar extends Component {
       });
     };
     return (
-      <div className="navbarContainer">
-        <div className="headingBTN">
-          <h2 className="heading">Newsify</h2>
-          <div onClick={showNav} className="hideBtn showList">
-            <i className="fa-solid fa-bars"></i>
+      <div className="nav">
+        <div className="navbarContainer">
+          <div className="headingBTN">
+            <h2 className="heading">Newsify</h2>
+            <div onClick={showNav} className="hideBtn showList">
+              <i className="fa-solid fa-bars"></i>
+            </div>
           </div>
-        </div>
-        <div className="list">
-          <ul className="btnlist">
-            <li>
-              <Link to="/">Top Headlines</Link>
-            </li>
-            <li>
-              <Link to="/business">Business</Link>
-            </li>
-            <li>
-              <Link to="/entertainment">Entertainment</Link>
-            </li>
-            <li>
-              <Link to="/health">Health</Link>
-            </li>
-            <li>
-              <Link to="/science">Science</Link>
-            </li>
-            <li>
-              <Link to="/sports">Sports</Link>
-            </li>
-            <li>
-              <Link to="/technology">Technology</Link>
-            </li>
-          </ul>
+          <div className="list">
+            <ul className="btnlist">
+              <li>
+                <Link to="/">Top Headlines</Link>
+              </li>
+              <li>
+                <Link to="/business">Business</Link>
+              </li>
+              <li>
+                <Link to="/entertainment">Entertainment</Link>
+              </li>
+              <li>
+                <Link to="/health">Health</Link>
+              </li>
+              <li>
+                <Link to="/science">Science</Link>
+              </li>
+              <li>
+                <Link to="/sports">Sports</Link>
+              </li>
+              <li>
+                <Link to="/technology">Technology</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );

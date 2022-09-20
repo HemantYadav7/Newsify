@@ -85,9 +85,6 @@ export default class News extends Component {
       this.props.category
     )}`;
   }
-  capitalFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
 
   async componentDidMount() {
     const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=${this.props.apiKey}&pageSize=21`;
@@ -105,6 +102,9 @@ export default class News extends Component {
     });
   }
 
+  capitalFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
   render() {
     const nextPage = async () => {
       const url = `https://newsapi.org/v2/top-headlines?country=in&category=${

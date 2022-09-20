@@ -103,4 +103,3 @@ export default class App extends Component {
     );
   }
 }
-<News category="general" />;
